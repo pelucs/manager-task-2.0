@@ -1,0 +1,380 @@
+.next-work-container{
+  width: 100%;
+  transition: .2s;
+}
+.next-work-container > button{
+  margin-top: 10px;
+
+  outline: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  border: 0;
+  background-color: transparent;
+  color: #000;
+}
+.next-work-container > button ion-icon{
+  font-size: 20px;
+}
+
+.next-work-box-button button{
+  width: 200px;
+  height: 40px;
+  padding: 0 7px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  cursor: pointer;
+  outline: none;
+
+  border: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: var(--destaque);
+  color: #fff;
+}
+.next-work-box-button button > ion-icon{
+  font-size: 17px;
+  margin-left: 5px;
+
+  transition: .2s;
+  transform: rotate(180deg);
+}
+.next-work-box-button span{
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 3px;
+  background-color: #ffffff4d;
+}
+.next-work-box{
+  width: 100%;
+  height: 100%;
+  
+  position: relative;
+  visibility: visible;
+  overflow: visible;
+  transition: .2s;
+
+  box-shadow: 5px 5px 10px #ccc;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  background-color: #fff;
+}
+.next-work-box h1{
+  font-size: 14px;
+  padding: 15px;
+}
+.title-box{
+  position: absolute;
+  right: 30px;
+  top: -30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+}
+.title-box li{
+  margin: 0 15px;
+  font-size: 12px;
+
+  color: #888;
+}
+.active-box-task{
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.task{
+  width: 100%;
+  padding: 10px 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #eee;
+}
+.task:last-of-type{
+  border: 0;
+}
+
+.info-task-left,
+.info-task-right{
+  display: flex;
+  align-items: center;
+}
+
+.info-task-left p{
+  margin-left: 10px;
+  font-size: 15px;
+}
+.info-task-left input{
+  width: 20px;
+  height: 20px;
+
+  cursor: pointer;
+}
+.info-task-right{
+  list-style: none;
+}
+.info-task-right li span{
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--negativa);
+}
+.info-task-right li span ion-icon{
+  font-size: 30px;
+}
+.info-task-right p{
+  font-size: 13px;
+  color: #888;
+}
+.info-task-right hr{
+  width: 1px;
+  height: 30px;
+  margin: 0 20px;
+
+  border: 0;
+  background-color: #eee;
+}
+.nivel-task-color{
+  width: 15px;
+  height: 15px;
+}
+
+.modal-container{
+  width: 100%;
+  height: 100vh;
+  padding: 0 30px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: .2s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.active-modal-nova-terefa,
+.active-modal-excluir-tarefa,
+.active-modal-new-task{
+  visibility: visible;
+  opacity: 1;
+}
+.back-close-modal{
+  width: 100%;
+  height: 100%;
+  
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-nova-tarefa{
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+
+  position: relative;
+  z-index: 9;
+
+  border-radius: 5px;
+  background-color: #fff;
+}
+.modal-nova-tarefa > span{
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: -10px;
+  right: -10px;
+
+  cursor: pointer;
+  color: #fff;
+
+  border-radius: 50%;
+  background-color: var(--primaria);
+}
+.modal-nova-tarefa span ion-icon{
+  font-size: 20px;
+}
+.modal-nova-tarefa > h1{
+  padding-bottom: 10px;
+  font-size: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.modal-nova-tarefa input[type="text"]{
+  width: 100%;
+  padding: 15px;
+  margin-top: 15px;
+
+  outline: none;
+
+  border: 0;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+}
+.modal-nova-tarefa input[type="radio"]{
+  width: 20px;
+  height: 20px;
+
+  appearance: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  border: 2px solid var(--destaque);
+}
+.modal-nova-tarefa input[type="radio"]::before{
+  content: "";
+  display: block;
+  opacity: 0;
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+  background-color: var(--destaque);
+}
+.modal-nova-tarefa input[type="radio"]:checked:before{
+  opacity: 1;
+}
+.nivel-task{
+  width: 100%;
+  margin-top: 15px;
+  list-style: none;
+}
+.nivel-task h1{
+  font-size: 16px;
+  color: #888;
+}
+.nivel-task li{
+  margin-top: 10px;
+
+  display: flex;
+  align-items: center;
+}
+.nivel-task li label{
+  margin: 0 10px 0 5px;
+  font-size: 14px;
+}
+.nivel-task li span{
+  width: 15px;
+  height: 15px;
+}
+.nivel-task li:nth-of-type(1) span{
+  background-color: #f44336;
+}
+.nivel-task li:nth-of-type(2) span{
+  background-color: #f6776e;
+}
+.nivel-task li:nth-of-type(3) span{
+  background-color: #f8a7a2;
+}
+
+.modal-nova-tarefa button{
+  width: 100%;
+  padding: 15px;
+  margin-top: 15px;
+
+  cursor: pointer;
+  outline: none;
+
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--destaque);
+  color: #fff;
+}
+
+.modal-excluir-tarefa-container{
+  z-index: 99999;
+}
+
+.modal-excluir-tarefa{
+  width: 300px;
+  padding: 15px;
+  z-index: 9;
+
+
+  border-radius: 5px;
+  background-color: #fff;
+}
+.modal-excluir-tarefa h1{
+  text-align: center;
+  font-size: 15px;
+}
+.modal-excluir-tarefa p{
+  margin: 15px 0;
+  font-size: 13px;
+}
+.buttons-excluir-tarefa{
+  width: 100%;
+  margin-top: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.buttons-excluir-tarefa button{
+  width: 48%;
+  padding: 10px;
+
+  cursor: pointer;
+  transition: .2s;
+
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--negativa);
+  color: #fff;
+}
+
+@media screen and (max-width: 700px){
+  .info-task-left input{
+    width: 15px;
+    height: 15px;
+  } 
+  .info-task-left p{
+    font-size: 13px;
+  }
+  .info-task-right hr{
+    margin: 0 10px;
+  }
+  .info-task-right li p{
+    font-size: 12px;
+  }
+  .nivel-task-color{
+    width: 10px;
+    height: 10px;
+  }
+  .title-box li{
+    margin: 0 10px 0 0;
+  }
+  .next-work-box-button button{
+    width: initial;
+    height: 35px;
+    padding: 0 10px;
+
+    font-size: 11px;
+  }
+}

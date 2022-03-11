@@ -1,0 +1,178 @@
+.sidebar{
+  width: 200px;
+  height: 100vh;
+  padding: 20px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: .2s;
+  background-color: var(--primaria);
+}
+
+.menu-hamb-sidebar{
+  width: 25px;
+  cursor: pointer;
+}
+.menu-hamb-sidebar::before,
+.menu-hamb-sidebar::after{
+  content: "";
+  display: block;
+  margin-top: 5px;
+
+  width: 20px;
+  height: 2px;
+
+  background-color: #fff;
+}
+
+.menu-sidebar{
+  width: 100%;
+  list-style: none;
+
+  position: relative;
+  top: -10%;
+}
+.menu-sidebar li{
+  width: 100%;
+  height: 40px;
+  margin-top: 5px;
+
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+  transition: .2s;
+
+  border-radius: 5px;
+}
+.menu-sidebar li:hover{
+  padding: 0 10px;
+  background-color: var(--secundaria);
+}
+.menu-sidebar li a{
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+}
+.menu-sidebar li a ion-icon{
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.menu-sidebar-bottom{
+  width: 100%;
+
+}
+.menu-sidebar-bottom a{
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+}
+.menu-sidebar-bottom a ion-icon{
+  font-size: 30px;
+  margin-right: 5px;
+}
+.menu-sidebar-bottom hr{
+  width: 100%;
+  height: 1px;
+  margin: 15px 0;
+
+  border: 0;
+  background-color: #888;
+}
+.log-out{
+  width: 100%;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+  transition: .2s;
+
+  font-size: 12px;
+  color: #fff;
+
+  border-radius: 5px;
+}
+.log-out:hover{
+  padding: 0 10px;
+  background-color: var(--secundaria);
+}
+.log-out ion-icon{
+  margin-right: 5px;
+  font-size: 25px;
+}
+
+.active-sidebar{
+  width: 60px;
+  padding: 20px 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.active-sidebar .menu-sidebar li,
+.active-sidebar .log-out{
+  justify-content: center;
+}
+.active-sidebar .menu-sidebar li:hover,
+.active-sidebar .log-out:hover{
+  padding: 0;
+}
+.active-sidebar .menu-sidebar li a ion-icon{
+  margin: 0;
+}
+.active-sidebar .hidden-name{
+  display: none;
+}
+
+.sidebar-bottom{
+  display: none;
+}
+
+@media screen and (max-width: 800px){
+  .sidebar{
+    display: none;
+  }
+  .sidebar-bottom{
+    width: 100%;
+    height: 50px;
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+
+    background-color: var(--primaria);
+  }
+  .menu-bottom{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+  }
+  .menu-bottom li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 23px;
+  }
+}

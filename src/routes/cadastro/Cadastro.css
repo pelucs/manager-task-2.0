@@ -1,0 +1,84 @@
+.cadastro-container{
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-aviso{
+  padding: 15px;
+
+  display: flex;
+  align-items: center;
+
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99999;
+
+  transition: .3s;
+
+  border-radius: 5px;
+  border-left: 3px solid var(--destaque);
+  background-color: #eee;
+  color: #000;
+}
+.active-modal-aviso-cadastro{
+  top: 20px;
+}
+
+.content-box-left-cadastro{
+  height: 100vh;
+  padding: 140px 40px 0 40px;
+  background-color: #fff;
+}
+.content-box-left-cadastro h1{
+  font-weight: bold;
+  font-size: 2rem;
+  color: var(--destaque);
+}
+.content-box-left-cadastro p{
+  margin-top: 10px;
+  font-size: 15px;
+  color: #000;
+}
+
+.content-box-right-cadastro{
+  padding: 140px 0 100px 40px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.form{
+  width: 100%;
+  max-width: 400px;
+}
+
+@media screen and (max-width: 750px){
+  .cadastro-container{
+    padding-bottom: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .content-box{
+    width: 100%;
+    padding: 0 30px;
+  }
+  .content-box-left-cadastro{
+    height: initial;
+    padding-top: 150px;
+    text-align: center;
+
+    background-color: #f3f3f3;
+  }
+  .content-box-right-cadastro{
+    padding: 0 30px;
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,169 @@
+.user-container{
+  width: 100%;
+  padding: 115px 40px 40px 220px;
+
+  transition: .2s;
+}
+.active-user-container{
+  padding: 120px 40px 40px 80px;
+}
+
+.active-modal-aviso-user{
+  top: 20px;
+}
+
+.profile-container{
+  width: 100%;
+}
+
+.dados-user li{
+  list-style: none;
+  padding: 15px 0;
+
+  display: flex;
+  align-items: center;
+
+  border-bottom: 1px solid #ccc;
+}
+.dados-user li h1{
+  font-size: 15px;
+  font-weight: bold;
+}
+.dados-user li p{
+  margin-left: 7px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.dados-user li button{
+  margin-left: 7px;
+  padding: 10px;
+
+  outline: none;
+  cursor: pointer;
+
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--destaque);
+  color: #fff;
+}
+
+.excluir-conta-box{
+  width: 100%;
+  margin-top: 20px;
+}
+.excluir-conta-box h1{
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--negativa);
+}
+.excluir-conta-box p{
+  margin-top: 5px;
+  font-size: 14px;
+  color: var(--negativa);
+}
+.excluir-conta-box button{
+  margin-top: 10px;
+  padding: 10px;
+
+  cursor: pointer;
+  transition: .2s;
+
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--negativa);
+  color: #fff;
+}
+.excluir-conta-box button:hover{
+  transform: scale(.98);
+}
+
+.modal-excluir-conta-container{
+  width: 100%;
+  height: 100vh;
+  padding: 0 30px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: .2s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.back-close-modal-excluir-conta{
+  width: 100%;
+  height: 100vh;
+
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-excluir-conta-box{
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+
+  position: relative;
+  z-index: 9;
+
+  border-radius: 5px;
+  background-color: #fff;
+}
+.modal-excluir-conta-box span{
+  width: 30px;
+  height: 30px;
+
+  position: absolute;
+  top: -10px;
+  right: -10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  border-radius: 50%;
+  background-color: #000;
+
+  font-size: 20px;
+  color: #ccc;
+}
+.modal-excluir-conta-box h1{
+  text-align: center;
+  font-size: 15px;
+}
+.modal-excluir-conta-box .input input{
+  width: 100%;
+  border-left-color: var(--negativa);
+}
+.modal-excluir-conta-box .input ion-icon{
+  color: var(--negativa);
+}
+.modal-excluir-conta-box button{
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+
+  cursor: pointer;
+  outline: none;
+
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--negativa);
+  color: #fff;
+}
+
+.active-modal-excluir-conta{
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 800px){
+  .user-container{
+    padding: 120px 20px 100px 20px;
+  }
+}

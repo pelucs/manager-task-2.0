@@ -1,0 +1,14 @@
+.app-container{
+  transition: .2s;
+  padding: 120px 40px 40px 240px;
+}
+
+.active-app-container{
+  padding: 120px 40px 40px 100px;
+}
+
+@media screen and (max-width: 800px){
+  .app-container{
+    padding: 120px 20px 20px 20px;
+  }
+}
